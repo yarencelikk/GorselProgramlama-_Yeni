@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage  
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"  
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+    x:Class="GorselProgramlama_Yeni.Pages.HaberlerPage"  
+    Title="Haberler"  
+    BackgroundColor="White">
+
+    <ScrollView VerticalScrollBarVisibility="Always">
+        <VerticalStackLayout>
+
+            <!-- Kategori Butonları -->
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Always">
+                <HorizontalStackLayout Padding="10" Spacing="10">
+                    <Button Text="Gündem" Clicked="KategoriSecildi" CommandParameter="https://www.trthaber.com/gundem_articles.rss"
+         BackgroundColor="#232323" TextColor="White"/>
+                    <Button Text="Ekonomi" Clicked="KategoriSecildi" CommandParameter="https://www.trthaber.com/ekonomi_articles.rss"
+         BackgroundColor="#232323" TextColor="White"/>
+                    <Button Text="Spor" Clicked="KategoriSecildi" CommandParameter="https://www.trthaber.com/spor_articles.rss"
+         BackgroundColor="#232323" TextColor="White"/>
+                    <Button Text="Bilim Teknoloji" Clicked="KategoriSecildi" CommandParameter="https://www.trthaber.com/bilim_teknoloji_articles.rss"
+         BackgroundColor="#232323" TextColor="White"/>
+                    <Button Text="Son Dakika" Clicked="KategoriSecildi" CommandParameter="https://www.trthaber.com/sondakika_articles.rss"
+         BackgroundColor="#232323"  TextColor="White"/>
+                </HorizontalStackLayout>
+            </ScrollView>
+
+            <!-- Haber Listesi -->
+            <CollectionView x:Name="HaberListesi"
+                            SelectionMode="Single"
+                            SelectionChanged="OnItemSelected"
+                            Margin="5">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Margin="10"
+                               BorderColor="LightGray"
+                               CornerRadius="8"
+                               HasShadow="True"
+                               Padding="0">
+                            <VerticalStackLayout>
+                                <!-- Görsel tam görünür -->
+                                <Image Source="{Binding thumbnail}"
+                                       HeightRequest="200"
+                                       Aspect="AspectFit"
+                                       HorizontalOptions="Start" />
+
+                                <!-- Altına başlık ve tarih -->
+                                <VerticalStackLayout Padding="10" Spacing="4">
+                                    <Label Text="{Binding title}"
+                                           FontAttributes="Bold"
+                                           FontSize="16"
+                                           LineBreakMode="TailTruncation"
+                                           MaxLines="2" />
+
+                                    <Label Text="{Binding pubDate}"
+                                           FontSize="12"
+                                           TextColor="Gray" />
+                                </VerticalStackLayout>
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

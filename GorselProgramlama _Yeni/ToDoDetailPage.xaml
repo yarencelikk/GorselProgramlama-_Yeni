@@ -1,0 +1,14 @@
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GorselProgramlama_Yeni.Pages.ToDoDetailPage"
+    Title="Görev Detay">
+
+    <VerticalStackLayout Padding="10" Spacing="10">
+        <Entry x:Name="titleEntry" Placeholder="Görev başlığı"/>
+        <Entry x:Name="detailEntry" Placeholder="Detay"/>
+        <DatePicker x:Name="datePicker"/>
+        <TimePicker x:Name="timePicker" Time="12:00"/>
+        <Button Text="Kaydet" Clicked="OnSaveClicked" BackgroundColor="#89CFF0" TextColor="White"/>
+    </VerticalStackLayout>
+</ContentPage>

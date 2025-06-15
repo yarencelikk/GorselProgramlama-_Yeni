@@ -1,0 +1,40 @@
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:GorselProgramlama_Odev3.Pages"
+    x:Class="GorselProgramlama_Yeni.Pages.ToDoPage"
+    Title="Yapılacaklar">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="10" Spacing="10">
+            <Button Text="Görev Ekle" Clicked="OnAddButtonClicked" BackgroundColor="#89CFF0" TextColor="White"/>
+
+            <CollectionView x:Name="toDoCollection" SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BorderColor="Gray" CornerRadius="8" Padding="10">
+                            <VerticalStackLayout>
+                                <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="18"/>
+                                <Label Text="{Binding Detail}" FontSize="14"/>
+                                <Label Text="{Binding Date}" FontSize="12" TextColor="Gray"/>
+                                <Label Text="{Binding Time}" FontSize="12" TextColor="Gray"/>
+                                <CheckBox IsChecked="{Binding IsDone}" CheckedChanged="OnCheckboxChanged"/>
+
+
+
+
+                                <Button Text="Sil"
+                                            BackgroundColor="#89CFF0"
+                                            TextColor="White"
+                                            CommandParameter="{Binding .}"
+                                            Clicked="OnDeleteClicked"/>
+
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+
+    </ScrollView>
+</ContentPage>

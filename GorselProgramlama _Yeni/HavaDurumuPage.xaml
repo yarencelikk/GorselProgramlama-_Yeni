@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GorselProgramlama_Yeni.Pages.HavaDurumuPage"
+             Title="Hava Durumu">
+
+    <ScrollView VerticalScrollBarVisibility="Always">
+        <VerticalStackLayout Padding="10">
+
+            <!-- Şehir Giriş Alanı -->
+            <HorizontalStackLayout Spacing="10">
+                <Entry x:Name="sehirEntry"
+                       Placeholder="Şehir girin (örn. Bartin)"
+                       WidthRequest="250" />
+                <Button Text="Ekle" Clicked="SehirEkle"/>
+            </HorizontalStackLayout>
+
+            <!-- Dinamik içerik -->
+            <VerticalStackLayout x:Name="havaDurumuStack"
+                                 Spacing="10"
+                                 Margin="0,20,0,0"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

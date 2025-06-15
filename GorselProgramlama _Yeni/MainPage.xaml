@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GorselProgramlama_Yeni.Pages.MainPage"
+             Title="Giriş">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="25" HorizontalOptions="Center">
+
+            <Label Text="ÖDEV-3" FontSize="28" FontAttributes="Bold" HorizontalOptions="Center" />
+
+            <Image Source="profile.jpg" WidthRequest="200" HeightRequest="200" Aspect="AspectFill" 
+                   HorizontalOptions="Center" />
+
+            <Label Text="EMİNE YAREN ÇELİK" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
+            <Label Text="22010310025" FontSize="20" HorizontalOptions="Center" />
+            <Label Text="Bartın Üniversitesi Bilgisayar Mühendisliği Bölümü" 
+                   FontSize="16" HorizontalTextAlignment="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

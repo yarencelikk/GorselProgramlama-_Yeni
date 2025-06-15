@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GorselProgramlama_Yeni.HaberDetayPage"
+             Title="Haber Detayı"
+             BackgroundColor="White">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="15" Spacing="10">
+
+            <!-- Frame içinde köşeleri yuvarlatılmış resim -->
+            <Frame HasShadow="False" Padding="0" CornerRadius="12">
+                <Image x:Name="HaberResim"
+                       HeightRequest="220"
+                       Aspect="AspectFill"
+                       HorizontalOptions="Fill" />
+            </Frame>
+
+            <Label x:Name="TarihLabel"
+                   FontSize="12"
+                   TextColor="Gray"
+                   HorizontalOptions="Start" />
+
+            <Label x:Name="BaslikLabel"
+                   FontAttributes="Bold"
+                   FontSize="20"
+                   TextColor="Black"
+                   HorizontalOptions="Start"
+                   LineBreakMode="WordWrap" />
+
+            <Label x:Name="AciklamaLabel"
+                   FontSize="14"
+                   TextColor="Black"
+                   LineBreakMode="WordWrap"
+                   HorizontalOptions="Fill" />
+
+            <Button Text="Haberi Paylaş"
+                    Clicked="ShareClicked"
+                    BackgroundColor="#232323"
+                    TextColor="White"
+                    CornerRadius="8"
+                    HorizontalOptions="Center"
+                    WidthRequest="150"
+                    Margin="0,10"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

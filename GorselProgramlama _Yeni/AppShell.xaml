@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="GorselProgramlama_Yeni.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:GorselProgramlama_Yeni.Pages">
+
+    <FlyoutItem Title="Giriş" Icon="person.png">
+        <ShellContent Title="Giriş" ContentTemplate="{DataTemplate pages:MainPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Kurlar" Icon="money.png">
+        <ShellContent Title="Kurlar" ContentTemplate="{DataTemplate pages:KurlarPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Haberler" Icon="news.png">
+        <ShellContent Title="Haberler" ContentTemplate="{DataTemplate pages:HaberlerPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Hava Durumu" Icon="weather.png">
+        <ShellContent Title="Hava Durumu" ContentTemplate="{DataTemplate pages:HavaDurumuPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Yapılacaklar" Icon="todo.png">
+        <ShellContent Title="Yapılacaklar" ContentTemplate="{DataTemplate pages:ToDoPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Ayarlar" Icon="settings.png">
+        <ShellContent Title="Ayarlar" ContentTemplate="{DataTemplate pages:AyarlarPage}" />
+    </FlyoutItem>
+
+
+
+
+</Shell>

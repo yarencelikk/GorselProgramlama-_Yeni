@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GorselProgramlama_Yeni.Pages.LoginPage"
+             Title="Giriş">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="20">
+
+            <!-- GİRİŞ KISMI -->
+            <StackLayout x:Name="LoginSection" IsVisible="True" Spacing="15">
+
+                <Label Text="Giriş Yap" FontSize="32" FontAttributes="Bold" HorizontalOptions="Center" />
+
+                <Entry x:Name="EmailEntry" Placeholder="E-posta" Keyboard="Email" />
+                <Entry x:Name="PasswordEntry" Placeholder="Şifre" IsPassword="True" />
+
+                <Button Text="Giriş Yap"
+                    Clicked="OnLoginClicked"
+                    BackgroundColor="#89CFF0"
+                    TextColor="White"
+                    CornerRadius="10"
+                    HeightRequest="50" />
+
+                <Label Text="Hesabım yok" TextColor="DarkSlateGray" HorizontalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnShowRegisterTapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+            <!-- KAYIT KISMI -->
+            <StackLayout x:Name="RegisterSection" IsVisible="False" Spacing="15">
+
+                <Label Text="Kayıt Ol" FontSize="32" FontAttributes="Bold" HorizontalOptions="Center" />
+
+                <Entry x:Name="FullNameEntry" Placeholder="Ad Soyad" />
+                <Entry x:Name="RegisterEmailEntry" Placeholder="E-posta" Keyboard="Email" />
+                <Entry x:Name="RegisterPasswordEntry" Placeholder="Şifre" IsPassword="True" />
+
+                <Button Text="Kayıt Ol"
+            Clicked="OnRegisterClicked"
+            BackgroundColor="#89CFF0"
+            TextColor="White"
+            CornerRadius="10"
+            HeightRequest="50" />
+
+                <Label Text="Zaten hesabım var" TextColor="DarkSlateGray" HorizontalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnHideRegisterTapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+
+            <Label x:Name="ErrorLabel" TextColor="Red" IsVisible="False" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
